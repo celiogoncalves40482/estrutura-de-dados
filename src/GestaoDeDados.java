@@ -1,11 +1,11 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ClienteGUI {
+public class GestaoDeDados {
     private HashMap<String, Cliente> clientesByCpf; // Mapa para armazenar os clientes indexados pelo CPF
     private int numClientes; // Número atual de clientes
 
-    public ClienteGUI() {
+    public GestaoDeDados() {
         clientesByCpf = new HashMap<>();
         numClientes = 0;
     }
@@ -58,7 +58,7 @@ public class ClienteGUI {
     }
 
     public static void main(String[] args) {
-        ClienteGUI clienteGUI = new ClienteGUI();
+        GestaoDeDados gestaoDeDados = new GestaoDeDados();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -81,15 +81,15 @@ public class ClienteGUI {
                     String telefone = scanner.nextLine();
                     System.out.print("Email: ");
                     String email = scanner.nextLine();
-                    clienteGUI.adicionarCliente(nome, cpf, telefone, email);
+                    gestaoDeDados.adicionarCliente(nome, cpf, telefone, email);
                     break;
                 case 2:
                     System.out.print("CPF do cliente a buscar: ");
                     String cpfBuscar = scanner.nextLine();
-                    clienteGUI.buscarCliente(cpfBuscar);
+                    gestaoDeDados.buscarCliente(cpfBuscar);
                     break;
                 case 3:
-                    clienteGUI.listarClientes();
+                    gestaoDeDados.listarClientes();
                     break;
                 case 4:
                     System.out.println("Saindo...");
