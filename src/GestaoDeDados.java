@@ -1,6 +1,4 @@
 import java.util.HashMap;
-import java.util.Scanner;
-
 public class GestaoDeDados {
     private HashMap<String, Cliente> clientesByCpf; // Mapa para armazenar os clientes indexados pelo CPF
     private int numClientes; // Número atual de clientes
